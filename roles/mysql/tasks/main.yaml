@@ -11,10 +11,6 @@
     state: started
     enabled: yes
     name: mysqld
-
-- name: setup root password
-  command: mysql_secure_installation --set-root-pass "{{ mysql_secret }}"
-
 - name: install dependencie
   ansible.builtin.pip:
     name: "{{ item }}"
@@ -22,3 +18,7 @@
   loop:
   - boto3
   - botocore
+  
+- name: setup root password
+  command: mysql_secure_installation --set-root-pass "{{ mysql_secret }}"
+
