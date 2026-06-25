@@ -7,3 +7,4 @@ USER_HOST: user-{{ env }}.daws90s.shop
 CART_HOST: cart-{{ env }}.daws90s.shop
 SHIPPING_HOST: shipping-{{ env }}.daws90s.shop
 PAYMENT_HOST: payment-{{ env }}.daws90s.shop
+app_version: v3
